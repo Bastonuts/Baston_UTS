@@ -43,11 +43,13 @@ document.addEventListener('DOMContentLoaded', async () => {
       datosLimitados.forEach(dato => {
         const googleMapsLink = `https://www.google.com/maps?q=${dato.latitud},${dato.longitud}`;
         const row = document.createElement('tr');
+        const fechaValida = new Date(dato.fecha);
+        const fechaFormateada = fechaValida.toLocaleString();
         row.innerHTML = `
           <td>${dato.id}</td>
           <td>${dato.latitud}</td>
           <td>${dato.longitud}</td>
-          <td>${new Date(dato.Fecha).toLocaleString()}</td>
+          <td>${fechaFormateada}</td>
           <td><a href="${googleMapsLink}" target="_blank">Ver en Google Maps</a></td>
         `;
         gpsContainer.appendChild(row);
@@ -58,13 +60,36 @@ document.addEventListener('DOMContentLoaded', async () => {
       giroscopioContainer.innerHTML = ''; // Limpiar contenido anterior
       datosLimitados.forEach(dato => {
         const row = document.createElement('tr');
+        const fechaValida = new Date(dato.fecha);
+        const fechaFormateada = fechaValida.toLocaleString();
         row.innerHTML = `
           <td>${dato.id}</td>
           <td>${dato.posicion}</td>
-          <td>${new Date(dato.Fecha).toLocaleString()}</td>
+          <td>${fechaFormateada}</td>
         `;
         giroscopioContainer.appendChild(row);
       });
+
+      // 📌 Datos de Alertas
+    const alertasContainer = document.querySelector('#alertasData');
+    alertasContainer.innerHTML = ''; // Limpiar contenido anterior
+    datosLimitados.forEach(dato => {
+      const row = document.createElement('tr');
+      const fechaValida = new Date(dato.fecha);
+        const fechaFormateada = fechaValida.toLocaleString();
+      
+      // Determinar el mensaje de la alerta
+      const mensaje = dato.alerta === 'crítico' ? 'Hubo un incidente' : 'Todo Bien';
+
+      row.innerHTML = `
+        <td>${dato.id}</td>
+        <td>${mensaje}</td>
+        <td>${fechaFormateada}</td>
+      `;
+      alertasContainer.appendChild(row);
+    });
+
+
     } catch (error) {
       console.error('Error fetching datos_baston:', error);
     }
