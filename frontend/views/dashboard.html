@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Bastón Inteligente</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      background-image: url('../imagenes/Fondo.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../imagenes/Sistel.png" alt="Logo" class="navbar-logo">
+      Hola, Bienvenido al panel de control.
+      <img src="../imagenes/Logo-UTS.png" alt="Logo2" class="navbar-logo2">
+      <button id="logoutBtn">Cerrar Sesión</button>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <section class="dashboard-content">
+    <h1>Bastón Inteligente - Dashboard</h1>
+    <h2>Desarrollador: Miguel Noriega. Director: Johan Tellez.</h2>
+    
+    <div class="top-right-container">
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Los datos de los usuarios se insertarán aquí -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container-wrapper">
+      
+      <!-- Contenedor de Datos GPS -->
+      <div class="container">
+        <h2>Datos GPS</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Latitud</th>
+              <th>Longitud</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="gpsData">
+            <!-- Aquí se insertarán los datos de GPS -->
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Contenedor de Datos Giroscopio -->
+      <div class="container">
+        <h2>Datos Giroscopio</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Posición</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="giroscopioData">
+            <!-- Aquí se insertarán los datos de Giroscopio -->
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Contenedor de Alertas -->
+      <div class="container">
+        <h2>Alertas</h2>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="dashboard-footer">
+    <p>© Miguel Noriega UTS 2024. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

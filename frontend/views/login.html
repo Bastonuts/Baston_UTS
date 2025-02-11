@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Bastón Inteligente</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      background-image: url('../imagenes/Fondologin.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+    }
+    .main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .info-container {
+      width: 200px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-right: 20px;
+      text-align: center;
+    }
+    .login-container {
+      width: 350px;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .login-container label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+    }
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .login-container button:hover {
+      background-color: #0056b3;
+    }
+    .login-container #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <img src="../imagenes/Sistel.png" alt="Logo" class="navbar-logo">
+      Web Baston inteligente.
+      <img src="../imagenes/Logo-UTS.png" alt="Logo2" class="navbar-logo2">
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="info-container">
+      <h3>Desarrollador:</h3>
+      <p>German Miguel Noriega</p>
+      <h3>Director:</h3>
+      <p>Johan Leandro Tellez</p>
+    </div>
+    <div class="login-container">
+      <h2>Iniciar Sesión:</h2>
+      <form id="loginForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+      <div id="errorMsg"></div>
+    </div>
+  </div>
+  <footer class="dashboard-footer">
+    <p>© Miguel Noriega UTS 2024. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>
