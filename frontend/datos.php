@@ -3,7 +3,7 @@
 
 $servername = "mysql.railway.internal";  // Ejemplo: containers-us-west-36.railway.app
 $username = "root";            // Usuario de la base de datos
-$password = "hbVNPuJtmkfcxsoOQZQuxxhfoyuznsbw";         // Contraseña de la base de datos
+$password = "ZsylMVAPTSYOoyEcrkmiTyPKWpsLxvVi";         // Contraseña de la base de datos
 $dbname = "datos_baston";        // Nombre de la base de datos
 $port = "3306";                 // Puerto de la base de datos (Railway)
 
