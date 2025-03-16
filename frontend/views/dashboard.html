@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Bastón Inteligente UTS</title>
+  <title>Dashboard - Bastón Inteligente</title>
   <link rel="stylesheet" href="/css/style.css">
   <style>
     body {
@@ -27,8 +27,13 @@
 
   <!-- Contenido -->
   <section class="dashboard-content">
-    <h1>Bastón Inteligente - Dashboard</h1>
-    <h2>Desarrollador: Miguel Noriega. Director: Johan Tellez.</h2>
+   
+    <div class="dashboard-title">
+      <h1>Bastón Inteligente - Dashboard</h1>
+      <h2>
+      </h2>
+    </div>
+
     
     <div class="top-right-container">
       <table id="usersTable">
@@ -52,7 +57,7 @@
         <table>
           <thead>
             <tr>
-              <th>ID</th>
+              <th>#Dato</th>
               <th>Latitud</th>
               <th>Longitud</th>
               <th>Fecha</th>
@@ -70,7 +75,7 @@
         <table>
           <thead>
             <tr>
-              <th>ID</th>
+              <th>#Dato</th>
               <th>Posición</th>
               <th>Fecha</th>
             </tr>
@@ -87,17 +92,16 @@
         <table>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Mensaje</th>
+              <th>#Alerta</th>
               <th>Fecha</th>
             </tr>
           </thead>
-          <tbody id="alertasData">
-            <!-- Aquí se insertarán las alertas -->
+          <tbody id="alertaslData">
+            <!-- Aquí se insertarán los datos de alertas -->
           </tbody>
         </table>
-        
       </div>
+      
     </div>
   </section>
 

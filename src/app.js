@@ -73,7 +73,7 @@ app.get('/api/users', async (req, res) => {
   }
 });
 
-// Ruta para obtener usuarios (opcional)
+// Ruta para obtener datos
 app.get('/api/datos_baston', async (req, res) => {
   try {
     const [rows] = await pool.query('SELECT * FROM datos_baston ORDER BY Fecha DESC');
