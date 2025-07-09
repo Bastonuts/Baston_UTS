@@ -60,7 +60,7 @@
               <th>#Dato</th>
               <th>Latitud</th>
               <th>Longitud</th>
-              <th>Fecha</th>
+              <td>${formatearFecha(dato.fecha)}</td>
             </tr>
           </thead>
           <tbody id="gpsData">
@@ -77,7 +77,7 @@
             <tr>
               <th>#Dato</th>
               <th>Posición</th>
-              <th>Fecha</th>
+              <td>${formatearFecha(dato.fecha)}</td>
             </tr>
           </thead>
           <tbody id="giroscopioData">
@@ -93,7 +93,7 @@
           <thead>
             <tr>
               <th>#Alerta</th>
-              <th>Fecha</th>
+              <td>${formatearFecha(dato.fecha)}</td>
             </tr>
           </thead>
           <tbody id="alertaslData">
@@ -107,7 +107,7 @@
 
   <!-- Footer -->
   <footer class="dashboard-footer">
-    <p>© Miguel Noriega UTS 2024. Todos los derechos reservados.</p>
+    <p>© Miguel Noriega. UTS 2024. Todos los derechos reservados.</p>
   </footer>
 
   <script src="/js/app.js"></script>

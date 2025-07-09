@@ -82,6 +82,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   };
 
+  // Función para formatear la fecha
+function formatearFecha(fechaISO) {
+  const fecha = new Date(fechaISO);
+  return fecha.toLocaleString('es-CO', {
+    timeZone: 'America/Bogota',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+}
+
   // Obtener datos al cargar la página
   await fetchUsers();
   await fetchDatosBaston();
