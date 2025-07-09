@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <td>${dato.id}</td>
           <td>${dato.latitud}</td>
           <td>${dato.longitud}</td>
-          <td>${dato.fechaISO}</td>
+          <td>${formatearFecha(dato.fecha)}</td>
           <td><a href="${googleMapsLink}" target="_blank">Ver en Google Maps</a></td>
         `;
         gpsContainer.appendChild(row);
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const row = document.createElement('tr');
       row.innerHTML = `
          <td>${mensajeAlerta}</td>
-         <td>${dato.fechaISO}</td>
+         <td>${formatearFecha(dato.fecha)}</td>
         `;
       alertasContainer.appendChild(row);
      });
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         row.innerHTML = `
           <td>${dato.id}</td>
           <td>${dato.posicion}</td>
-          <td>${dato.fechaISO}</td>
+          <td>${formatearFecha(dato.fecha)}</td>
         `;
         giroscopioContainer.appendChild(row);
       });
