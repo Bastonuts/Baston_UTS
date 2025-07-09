@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const alertasContainer = document.querySelector('#alertaslData');
       alertasContainer.innerHTML = ''; // Limpiar contenido anterior
       datosLimitados.forEach(dato => {
-        let mensajeAlerta = dato.alerta === 1 ? "⚠️ ¡Alerta! Posible caída detectada" : "✅ Todo en orden";
+        let mensajeAlerta = dato.posicion === "Bastón Caído" ? "⚠️ ¡Alerta! Posible caída detectada" : "✅ Todo en orden";
       const row = document.createElement('tr');
       row.innerHTML = `
          <td>${mensajeAlerta}</td>
